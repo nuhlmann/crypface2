@@ -30,8 +30,11 @@ exports.handler = async function (event, context) {
   } catch (error) {
     return {
       statusCode: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type"
+      },
       body: JSON.stringify({ error: "Failed to fetch CoinGecko data" })
     };
   }
 };
-Fix: remove invalid identifier CORS

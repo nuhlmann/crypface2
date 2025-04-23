@@ -24,3 +24,4 @@ exports.handler = async function(event, context) {
     }
   });
 };
+Fix CORS headers in coingecko.js
